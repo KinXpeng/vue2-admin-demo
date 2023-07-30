@@ -1,5 +1,5 @@
 export const IconMenu = {
-	icon: 'el-icon-edit',
+	icon: 'el-icon-orange',
 	index: 'icons',
 	subs: [
 		{

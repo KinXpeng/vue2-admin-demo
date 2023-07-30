@@ -9,7 +9,7 @@ export const menus = [
 	{
 		path: '/home',
 		index: 'home',
-		icon: 'el-icon-news',
+		icon: 'el-icon-menu',
 		meta: {
 			title: 'home'
 		}

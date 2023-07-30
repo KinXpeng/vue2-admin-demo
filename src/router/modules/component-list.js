@@ -1,5 +1,5 @@
 export const ComponentList = {
-	icon: 'el-icon-setting',
+	icon: 'el-icon-s-operation',
 	index: 'component',
 	subs: [
 		{

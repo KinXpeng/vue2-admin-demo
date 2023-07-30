@@ -1,29 +1,37 @@
 <template>
   <div class="head-container clearfix">
     <div class="header-left">
-      <showAside :toggle-click="toggleClick" />
+      <showAside :toggle-click="toggleClick" :isCollapse="isCollapse" />
       <breadcrumb />
     </div>
 
     <div class="header-right">
       <div class="header-user-con">
         <!-- 全屏显示 -->
-        <div class="btn-fullscreen" @click="handleFullScreen">
+        <div class="btn-fullscreen flex-both-center" @click="handleFullScreen">
           <el-tooltip effect="dark" :content="fullscreen ? $t('header.cancelFullScreen') : $t('header.fullScreen')"
             placement="bottom">
-            <i class="el-icon-rank"></i>
+            <iconsvg v-if="!fullscreen" icon="fullscreen" />
+            <iconsvg v-else icon="exitscreen" />
+            <iconsvg icon="github" />
           </el-tooltip>
         </div>
         <!-- 多语言 -->
         <select-lang></select-lang>
         <!-- 消息中心 -->
-        <div class="btn-bell">
+        <div class="btn-bell flex-both-center">
           <el-tooltip effect="dark" :content="$t('header.message')" placement="bottom">
             <router-link to="/tabs">
               <i class="el-icon-bell"></i>
             </router-link>
           </el-tooltip>
           <span class="btn-bell-badge" v-if="message"></span>
+        </div>
+        <!-- Github -->
+        <div class="icon-wrapper flex-both-center">
+          <el-tooltip effect="dark" content="Github" placement="bottom">
+            <iconsvg icon="github" />
+          </el-tooltip>
         </div>
         <!-- 用户名下拉菜单 -->
         <el-dropdown class="avatar-container" trigger="click">
@@ -50,12 +58,14 @@
 import showAside from "./showAside";
 import selectLang from './selectLang'
 import breadcrumb from './Breadcrumb'
+import iconsvg from '@/views/icons/iconsvg.vue'
 export default {
   // name:'header',
   components: {
     showAside,
     selectLang,
-    breadcrumb
+    breadcrumb,
+    iconsvg
   },
   data() {
     return {
@@ -130,7 +140,7 @@ export default {
 
 .header-right {
   float: right;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 .header-user-con {
@@ -141,34 +151,30 @@ export default {
 
 .btn-fullscreen {
   position: relative;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 15px;
   cursor: pointer;
-  margin-bottom: 10px;
-  transform: rotate(45deg);
-  margin-right: 5px;
   font-size: 24px;
   color: #666;
 }
 
+.icon-wrapper {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
 .btn-bell {
   position: relative;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 15px;
   cursor: pointer;
   font-size: 24px;
-  margin-right: 20px;
-  margin-bottom: 15px;
+
+  .el-tooltip {
+    display: flex;
+  }
 }
 
 .btn-bell-badge {
   position: absolute;
-  right: 0;
-  top: 8px;
+  right: -2px;
+  top: 0;
   width: 8px;
   height: 8px;
   border-radius: 4px;

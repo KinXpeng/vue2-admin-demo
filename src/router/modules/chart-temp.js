@@ -1,5 +1,5 @@
 export const ChartTemp = {
-	icon: 'el-icon-document',
+	icon: 'el-icon-s-help',
 	index: 'charts',
 	subs: [
 		{

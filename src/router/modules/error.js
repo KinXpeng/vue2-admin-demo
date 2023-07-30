@@ -1,5 +1,5 @@
 export const ErrorPage = {
-	icon: 'el-icon-warning',
+	icon: 'el-icon-setting',
 	index: 'error',
 	subs: [
 		{
