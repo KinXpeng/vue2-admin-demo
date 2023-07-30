@@ -28,7 +28,7 @@
           <span class="btn-bell-badge" v-if="message"></span>
         </div>
         <!-- Github -->
-        <div class="icon-wrapper flex-both-center">
+        <div class="icon-wrapper flex-both-center" @click="handleRedirectGithub">
           <el-tooltip effect="dark" content="Github" placement="bottom">
             <iconsvg icon="github" />
           </el-tooltip>
@@ -88,12 +88,14 @@ export default {
     toggleClick() {
       this.isCollapse = !this.isCollapse;
     },
+
     // 用户名下拉菜单选择事件
     logout(command) {
       this.$store.commit('TAGES_LIST', [])
       this.$store.commit('SET_BREAD', ['home'])
       this.$router.push("/login");
     },
+
     // 全屏事件
     handleFullScreen() {
       let element = document.documentElement;
@@ -120,7 +122,12 @@ export default {
         }
       }
       this.fullscreen = !this.fullscreen;
-    }
+    },
+
+    // github
+    handleRedirectGithub() {
+      window.open('https://github.com/KinXpeng/vue2-admin-demo')
+    },
   }
 }; 
 </script>
