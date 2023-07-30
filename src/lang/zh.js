@@ -13,7 +13,7 @@ const zh = {
 		countTo: '数字滚动',
 		trees: '树形控件',
 		treeSelect: '下拉树',
-		customTree: '自定义树',
+		treeTable: '树表格',
 		draggable: '拖拽',
 		draglist: '拖拽列表',
 		dragtable: '拖拽表格',

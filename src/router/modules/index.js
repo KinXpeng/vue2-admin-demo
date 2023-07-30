@@ -9,6 +9,7 @@ export const menus = [
 	{
 		path: '/home',
 		index: 'home',
+		layer: 0,
 		icon: 'el-icon-menu',
 		meta: {
 			title: 'home'
@@ -29,7 +30,11 @@ export const menus = [
 const recursionMenu = (list, index = 'home', arr = []) => {
 	list.forEach(item => {
 		if (item.subs && item.subs.length > 0) {
-			return recursionMenu(item.subs, item.index, arr)
+			let supIndex = index
+			if (item.layer == 0) {
+				supIndex = item.index
+			}
+			return recursionMenu(item.subs, supIndex, arr)
 		} else {
 			const menuItem = {
 				path: item.path,

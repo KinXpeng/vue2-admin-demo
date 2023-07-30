@@ -46,7 +46,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .icon-container {
-  padding: 40px;
+  padding: 14px 14px 40px;
   background: $base-white;
 
   .el-col {
@@ -88,5 +88,6 @@ export default {
 .icon-font {
   width: 32px;
   height: 32px;
-}</style>
+}
+</style>
 

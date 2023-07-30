@@ -1,6 +1,7 @@
 export const IconMenu = {
 	icon: 'el-icon-orange',
 	index: 'icons',
+	layer: 0,
 	subs: [
 		{
 			path: '/element',

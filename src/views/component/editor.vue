@@ -9,7 +9,7 @@
 </template>
 <script>
 import { upload } from "@/api/api.js";
-import {VueEditor} from "vue2-editor/dist/vue2-editor.core.js";
+import { VueEditor } from "vue2-editor/dist/vue2-editor.core.js";
 export default {
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
           let url = res.data.url;
           Editor.insertEmbed(cursorLocation, "image", url);
         })
-        .catch(e => {});
+        .catch(e => { });
     }
   }
 };
@@ -46,20 +46,23 @@ export default {
 @import '~quill/dist/quill.core.css';
 @import '~quill/dist/quill.bubble.css';
 @import '~quill/dist/quill.snow.css';
+
 .editor-container {
-  padding: 40px;
+  padding: 14px 14px 40px;
 }
+
 .expain {
   font-size: 16px;
   line-height: 60px;
   background: #f2f6fc;
   margin-bottom: 20px;
 }
+
 .expain a {
   color: #bdb7ff;
 }
+
 #editor {
   height: 400px;
-}
-</style>
+}</style>
 

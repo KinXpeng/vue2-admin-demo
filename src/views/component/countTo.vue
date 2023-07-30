@@ -2,10 +2,7 @@
   <div class="count">
     <p class="expain">
       数字滚动插件我们选择了vue-count-to，请参考相关
-      <a
-        href="https://github.com/PanJiaChen/vue-countTo"
-        target="_blank"
-      >文档</a>
+      <a href="https://github.com/PanJiaChen/vue-countTo" target="_blank">文档</a>
     </p>
     <template>
       <h1>Vue CountTo</h1>
@@ -13,13 +10,7 @@
         <div class="example-item">
           <h3>simple example</h3>
           <code>&lt;count-to :startVal=&#x27;0&#x27; :endVal=&#x27;2018&#x27; :duration=4000&gt;&lt;/count-to&gt;</code>
-          <count-to
-            ref="example1"
-            class="example1"
-            :start-val="startVal1"
-            :end-val="endVal1"
-            :duration="4000"
-          ></count-to>
+          <count-to ref="example1" class="example1" :start-val="startVal1" :end-val="endVal1" :duration="4000"></count-to>
           <div class="example-btn" @click="start1">start</div>
           <div class="example-btn" @click="changeExampleEndVal">change end-val</div>
           <div class="example-btn" @click="incrementalUpdate">incremental update</div>
@@ -32,18 +23,9 @@
         </div>
         <div class="example-item">
           <h3>custom example</h3>
-          <count-to
-            ref="example3"
-            class="example3"
-            :start-val="_startVal"
-            :end-val="_endVal"
-            :duration="_duration"
-            :decimals="_decimals"
-            :separator="_separator"
-            :prefix="_prefix"
-            :suffix="_suffix"
-            :autoplay="false"
-          ></count-to>
+          <count-to ref="example3" class="example3" :start-val="_startVal" :end-val="_endVal" :duration="_duration"
+            :decimals="_decimals" :separator="_separator" :prefix="_prefix" :suffix="_suffix"
+            :autoplay="false"></count-to>
           <div>
             <label class="label" for="startValInput">
               startVal:
@@ -78,9 +60,9 @@
             </label>
           </div>
           <code>
-            &lt;count-to :start-val=&#x27;{{_startVal}}&#x27; :end-val=&#x27;{{_endVal}}&#x27; :duration=&#x27;{{_duration}}&#x27; :decimals=&#x27;{{_decimals}}&#x27;
-            :separator=&#x27;{{_separator}}&#x27; :prefix=&#x27;{{_prefix}}&#x27; :suffix=&#x27;{{_suffix}}&#x27; :autoplay=false&gt;
-          </code>
+              &lt;count-to :start-val=&#x27;{{ _startVal }}&#x27; :end-val=&#x27;{{ _endVal }}&#x27; :duration=&#x27;{{ _duration }}&#x27; :decimals=&#x27;{{ _decimals }}&#x27;
+              :separator=&#x27;{{ _separator }}&#x27; :prefix=&#x27;{{ _prefix }}&#x27; :suffix=&#x27;{{ _suffix }}&#x27; :autoplay=false&gt;
+            </code>
         </div>
       </div>
     </template>
@@ -175,16 +157,19 @@ export default {
 </script>
 <style lang="scss" scoped>
 .count {
-  padding: 40px;
+  padding: 14px 14px 40px;
   font-size: 20px;
 }
-.expain{
-    background: #F2F6FC;
-    line-height: 60px
+
+.expain {
+  background: #F2F6FC;
+  line-height: 60px
 }
+
 .expain a {
   color: #bdb7ff;
 }
+
 code {
   display: block;
   padding: 8px 15px;
@@ -223,14 +208,17 @@ h3 {
 }
 
 @keyframes octocat-wave {
+
   0%,
   100% {
     transform: rotate(0);
   }
+
   20%,
   60% {
     transform: rotate(-25deg);
   }
+
   40%,
   80% {
     transform: rotate(10deg);
@@ -241,6 +229,7 @@ h3 {
   .github-corner:hover .octo-arm {
     animation: none;
   }
+
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }

@@ -13,7 +13,7 @@ const en = {
 		countTo: 'CountTo',
 		trees: 'Trees',
 		treeSelect: 'TreeSelect',
-		customTree: 'CustomTree',
+		treeTable: 'treeTable',
 		draggable: 'Draggable',
 		draglist: 'Draglist',
 		dragtable: 'Dragtable',

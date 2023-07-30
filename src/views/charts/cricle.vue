@@ -11,8 +11,8 @@ export default {
     this.drawChart();
     this.init();
   },
-  destroyed(){
-    window.onresize=null
+  destroyed() {
+    window.onresize = null
   },
   methods: {
     init() {
@@ -126,7 +126,9 @@ export default {
   width: 100%;
   height: 100%;
   background: #f3f3f3;
+  padding: 14px 14px 40px;
 }
+
 #charts {
   position: fixed;
   width: 100%;

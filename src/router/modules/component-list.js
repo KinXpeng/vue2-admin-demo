@@ -1,6 +1,7 @@
 export const ComponentList = {
 	icon: 'el-icon-s-operation',
 	index: 'component',
+	layer: 0,
 	subs: [
 		{
 			path: '/editor',
@@ -20,13 +21,6 @@ export const ComponentList = {
 			index: 'trees',
 			icon: 'el-icon-share',
 			subs: [
-				{
-					path: '/customTree',
-					index: 'customTree',
-					meta: {
-						title: 'customTree'
-					}
-				},
 				{
 					path: '/treeTable',
 					index: 'treeTable',

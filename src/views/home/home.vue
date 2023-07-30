@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <el-row :gutter="40">
+    <el-row :gutter="14">
       <el-col :lg="6" :sm="12">
         <div class="grid-content bg-white">
           <el-row>
@@ -94,7 +94,7 @@
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter="40">
+    <el-row :gutter="14">
       <el-col :lg="5" :sm="8" :xs="24">
         <div class="main-center clearfix">
           <div class="pull-left center-left">
@@ -121,24 +121,6 @@
       </el-col>
       <el-col :lg="19" :sm="16" :xs="24">
         <div id="charts" ref="charts"></div>
-      </el-col>
-    </el-row>
-    <el-row :gutter="40">
-      <el-col :lg="12">
-        <el-table :data="tableData" style="width: 100%" class="users">
-          <el-table-column prop="name" label="用户名" width="180"></el-table-column>
-          <el-table-column prop="date" label="日期" width="180"></el-table-column>
-          <el-table-column prop="address" label="地址"></el-table-column>
-        </el-table>
-      </el-col>
-      <el-col :lg="12">
-        <div class="todulist">
-          <div class="item" v-for="(item, i) in todulist" :key="i" @click="toDo(item, i)">
-            <!-- <input type="checkbox" :checked="item.checked" class="ipcont"> -->
-            <el-checkbox v-model="item.checked"></el-checkbox>
-            <span :class="item.checked ? 'done' : ''">{{ item.todo }}</span>
-          </div>
-        </div>
       </el-col>
     </el-row>
   </div>
@@ -271,7 +253,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
-  padding: 40px;
+  height: calc(100vh - 50px);
+  padding: 14px;
   background: $base-gray1;
 
   .bg-white {
@@ -279,7 +262,7 @@ export default {
     -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
+    // margin-bottom: 14px;
     cursor: pointer;
 
     .icons {
@@ -353,8 +336,8 @@ export default {
 
     .icons-right {
       font-size: 24px;
-      margin-top: 16px;
-      margin-right: 16px;
+      margin-top: 14px;
+      margin-right: 14px;
 
       li {
         margin: 10px 0;
@@ -369,7 +352,7 @@ export default {
 
   .main-center {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 14px;
   }
 
   .center-left {
@@ -378,18 +361,18 @@ export default {
     background: $base-white;
     font-size: 16px;
     color: $base-666;
-    padding-bottom: 60px;
+    padding-bottom: 76px;
     -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.05);
 
     .accout {
       text-align: left;
-      margin: 20px;
+      margin: 14px;
     }
 
     .tou {
-      margin-bottom: 20px;
+      margin-bottom: 14px;
 
       img {
         width: 85px;
@@ -412,34 +395,11 @@ export default {
     // width: 100%;
     height: 426px;
     background: $base-white;
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 14px;
+    padding-top: 14px;
     -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.05);
-  }
-
-  .users {
-    margin-top: 20px;
-  }
-
-  .todulist {
-    background: $base-white;
-    margin-top: 20px;
-
-    .item {
-      line-height: 46px;
-      border-bottom: 1px solid #ededed;
-      text-align: left;
-      padding-left: 40px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .done {
-      text-decoration: line-through;
-      color: gray;
-    }
   }
 }
 </style>
