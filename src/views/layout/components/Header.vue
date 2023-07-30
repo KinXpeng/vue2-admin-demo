@@ -60,9 +60,8 @@ export default {
   data() {
     return {
       fullscreen: false,
-      name: "linxin",
       message: 2,
-      username: "zyh"
+      username: "倾倾倾风"
     };
   },
   computed: {
