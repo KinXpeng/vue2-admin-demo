@@ -60,9 +60,9 @@
             </label>
           </div>
           <code>
-              &lt;count-to :start-val=&#x27;{{ _startVal }}&#x27; :end-val=&#x27;{{ _endVal }}&#x27; :duration=&#x27;{{ _duration }}&#x27; :decimals=&#x27;{{ _decimals }}&#x27;
-              :separator=&#x27;{{ _separator }}&#x27; :prefix=&#x27;{{ _prefix }}&#x27; :suffix=&#x27;{{ _suffix }}&#x27; :autoplay=false&gt;
-            </code>
+                &lt;count-to :start-val=&#x27;{{ _startVal }}&#x27; :end-val=&#x27;{{ _endVal }}&#x27; :duration=&#x27;{{ _duration }}&#x27; :decimals=&#x27;{{ _decimals }}&#x27;
+                :separator=&#x27;{{ _separator }}&#x27; :prefix=&#x27;{{ _prefix }}&#x27; :suffix=&#x27;{{ _suffix }}&#x27; :autoplay=false&gt;
+              </code>
         </div>
       </div>
     </template>
@@ -157,7 +157,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .count {
-  padding: 14px 14px 40px;
+  padding: 14px;
   font-size: 20px;
 }
 

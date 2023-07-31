@@ -130,7 +130,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .treeSelect {
-  padding: 14px 14px 40px;
+  padding: 14px;
 }
 
 .tree1 span {

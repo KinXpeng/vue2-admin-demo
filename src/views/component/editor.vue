@@ -48,7 +48,7 @@ export default {
 @import '~quill/dist/quill.snow.css';
 
 .editor-container {
-  padding: 14px 14px 40px;
+  padding: 14px;
 }
 
 .expain {
@@ -64,5 +64,6 @@ export default {
 
 #editor {
   height: 400px;
-}</style>
+}
+</style>
 

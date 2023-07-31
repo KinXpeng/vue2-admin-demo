@@ -122,15 +122,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .chart {
-  position: fixed;
   width: 100%;
-  height: 100%;
-  background: #f3f3f3;
-  padding: 14px 14px 40px;
+  height: calc(100vh - 108px);
+  padding: 14px;
 }
 
 #charts {
-  position: fixed;
   width: 100%;
   height: 90%;
   // top: 10%;

@@ -1,6 +1,6 @@
 <template>
-  <div class="head-container clearfix">
-    <div class="header-left">
+  <div class="head-container flex-center-between">
+    <div class="header-left flex-both-center">
       <showAside :toggle-click="toggleClick" :isCollapse="isCollapse" />
       <breadcrumb />
     </div>
@@ -60,7 +60,7 @@ import selectLang from './selectLang'
 import breadcrumb from './Breadcrumb'
 import iconsvg from '@/views/icons/iconsvg.vue'
 export default {
-  // name:'header',
+  name: 'Header',
   components: {
     showAside,
     selectLang,
@@ -133,21 +133,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .head-container {
+  position: sticky;
+  top: 0;
   height: 50px;
-  line-height: 50px;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 0 3px 0 rgba(0, 0, 0, 0.04);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
   padding-right: 40px;
+  border-bottom: 1px solid #f0f0f0;
+  z-index: 99;
+  background-color: #fff;
 }
 
 .header-user-con {

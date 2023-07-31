@@ -140,6 +140,6 @@ export default {
 
 <style scoped>
 .app-container {
-  padding: 14px 14px 40px;
+  padding: 14px;
 }
 </style>

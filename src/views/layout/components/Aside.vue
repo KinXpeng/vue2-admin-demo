@@ -4,7 +4,7 @@
       <i v-if="isCollapse" class="el-icon-house"></i>
       <span v-else>demo管理</span>
     </div>
-    <el-scrollbar wrap-class="scrollbar-wrapper">
+    <div class="aside-menu">
       <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
         :collapse="isCollapse" @select="select" active-text-color="#bdb7ff" router>
         <template v-for="item in items">
@@ -42,7 +42,7 @@
           </template>
         </template>
       </el-menu>
-    </el-scrollbar>
+    </div>
   </div>
 </template>
 <script>
@@ -118,15 +118,10 @@ export default {
   -webkit-transition: width 0.28s;
   transition: width 0.28s;
   height: 100%;
-  position: fixed;
-  font-size: 0px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1001;
-  overflow: hidden;
 
   .aside-title {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +130,12 @@ export default {
     color: #fff;
     font-size: 30px;
     font-weight: bold;
+    z-index: 99;
+  }
 
+  .aside-menu {
+    overflow: hidden;
+    min-height: calc(100vh - 50px);
   }
 
   .el-menu-vertical-demo:not(.el-menu--collapse) {
