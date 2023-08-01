@@ -1,12 +1,9 @@
 <template>
   <div class="aside">
-    <div class="aside-title">
-      <i v-if="isCollapse" class="el-icon-house"></i>
-      <span v-else>demo管理</span>
-    </div>
     <div class="aside-menu">
       <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
-        :collapse="isCollapse" @select="select" active-text-color="#bdb7ff" router>
+        :collapse="isCollapse" @select="select" active-text-color="#fff" router text-color="#fff"
+        background-color="#041527">
         <template v-for="item in items">
           <template v-if="item.subs">
             <el-submenu :index="item.index" :key="item.index">
@@ -119,23 +116,25 @@ export default {
   transition: width 0.28s;
   height: 100%;
 
-  .aside-title {
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    background-color: #bcb9fa;
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    z-index: 99;
-  }
-
   .aside-menu {
-    overflow: hidden;
-    min-height: calc(100vh - 50px);
+    overflow: auto;
+    height: 100vh;
+
+    .el-menu {
+      color: #fff;
+      box-shadow: 2px 0 8px 0 rgba(29, 35, 41, .05);
+      background-color: #041527;
+
+      .el-submenu {
+        .el-menu-item {
+          background-color: #020c16 !important;
+
+          &.is-active {
+            background-color: $base-color !important;
+          }
+        }
+      }
+    }
   }
 
   .el-menu-vertical-demo:not(.el-menu--collapse) {

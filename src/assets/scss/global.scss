@@ -1,28 +1,29 @@
 @import './index.scss';
 @import './cover.scss';
 @import './transition.scss';
-$base-color:#bdb7ff;
-$base-white:white;
-$base-bule1:#4d79f6;
-$base-gray1:#f0f2f5;
-$base-ye:#F0B600;
-$base-green:#34A853;
-$base-pink:#E2918C;
-$base-f8:#f8f8f8;
-$base-666:#666;
+// $base-color:#bdb7ff;
+$base-color: #4291f7;
+$base-white: white;
+$base-bule1: #4d79f6;
+$base-gray1: #f0f2f5;
+$base-ye: #f0b600;
+$base-green: #34a853;
+$base-pink: #e2918c;
+$base-f8: #f8f8f8;
+$base-666: #666;
 
 // Aside
 .el-scrollbar {
-    height: 100%;
-    border-right: solid 1px #e6e6e6;
-    .scrollbar-wrapper {
-        overflow-x: hidden !important;
-        .el-scrollbar__view {
-            overflow-x: hidden !important;
-        }
-    }
+	height: 100%;
+	border-right: solid 1px #e6e6e6;
+	.scrollbar-wrapper {
+		overflow-x: hidden !important;
+		.el-scrollbar__view {
+			overflow-x: hidden !important;
+		}
+	}
 }
 
 .el-menu {
-    border-right: 0;
+	border-right: 0;
 }

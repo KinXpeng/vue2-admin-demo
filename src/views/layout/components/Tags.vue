@@ -84,6 +84,10 @@ export default {
           path: route.fullPath,
           name: route.name
         });
+        // 不超过6个
+        if (this.tagsList.length > 6) {
+          this.tagsList.splice(1, 1)
+        }
         //存到vuex
         this.$store.commit("TAGES_LIST", this.tagsList);
       }
@@ -139,13 +143,20 @@ export default {
 
   .tags-li-icon {
     .el-icon-close {
-      // border: 1px solid red;
       padding: 2px;
       border-radius: 50%;
 
       &:hover {
-        background-color: #ccc;
+        color: #fff;
+        background-color: $base-color;
       }
+    }
+  }
+
+  &.active {
+    .tags-li-icon .el-icon-close:hover {
+      color: $base-color;
+      background-color: #fff;
     }
   }
 }

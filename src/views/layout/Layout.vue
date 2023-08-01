@@ -26,6 +26,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wrapper {
+  overflow: hidden;
   display: flex;
   position: relative;
   height: 100%;
