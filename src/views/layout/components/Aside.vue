@@ -121,6 +121,7 @@ export default {
     height: 100vh;
 
     .el-menu {
+      overflow-x: hidden;
       color: #fff;
       box-shadow: 2px 0 8px 0 rgba(29, 35, 41, .05);
       background-color: #041527;
