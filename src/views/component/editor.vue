@@ -13,7 +13,7 @@ import { VueEditor } from "vue2-editor/dist/vue2-editor.core.js";
 export default {
   data() {
     return {
-      content: "<h1>你好，zyh</h1>"
+      content: "<h1>你好，倾倾倾风！</h1>"
     };
   },
   components: {

@@ -6,8 +6,25 @@ export const ComponentList = {
 		{
 			path: '/editor',
 			index: 'editor',
+			// icon: 'el-icon-edit',
 			meta: {
 				title: 'editor'
+			}
+		},
+		{
+			path: '/transferBox',
+			index: 'transferBox',
+			// icon: 'el-icon-edit',
+			meta: {
+				title: 'transferBox'
+			}
+		},
+		{
+			path: '/searchCondition',
+			index: 'searchCondition',
+			// icon: 'el-icon-edit',
+			meta: {
+				title: 'searchCondition'
 			}
 		},
 		{
@@ -19,15 +36,8 @@ export const ComponentList = {
 		},
 		{
 			index: 'trees',
-			icon: 'el-icon-share',
+			// icon: 'el-icon-share',
 			subs: [
-				{
-					path: '/treeTable',
-					index: 'treeTable',
-					meta: {
-						title: 'treeTable'
-					}
-				},
 				{
 					path: '/treeSelect',
 					index: 'treeSelect',

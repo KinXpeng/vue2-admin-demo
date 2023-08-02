@@ -9,7 +9,7 @@ const zh = {
 		link: '外部链接',
 		element: 'element',
 		iconfont: 'iconfont',
-		editor: '富文本编译器',
+		editor: '富文本',
 		countTo: '数字滚动',
 		trees: '树形控件',
 		treeSelect: '下拉树',
@@ -20,6 +20,8 @@ const zh = {
 		cricle: '饼图',
 		permissionMenu: '菜单测试',
 		permissionBtn: '按钮测试',
+		transferBox: '穿梭框',
+		searchCondition: '搜索条件',
 		404: '404'
 	},
 	header: {

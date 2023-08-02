@@ -13,13 +13,15 @@ const en = {
 		countTo: 'CountTo',
 		trees: 'Trees',
 		treeSelect: 'TreeSelect',
-		treeTable: 'treeTable',
+		treeTable: 'TreeTable',
 		draggable: 'Draggable',
 		draglist: 'Draglist',
 		dragtable: 'Dragtable',
 		cricle: 'Cricle',
 		permissionMenu: 'Menu',
 		permissionBtn: 'PermissionBtn',
+		transferBox: 'TransferBox',
+		searchCondition: 'SearchCondition',
 		404: '404'
 	},
 	header: {
