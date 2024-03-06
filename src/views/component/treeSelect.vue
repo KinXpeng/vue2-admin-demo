@@ -128,6 +128,7 @@ export default {
   }
 };
 </script>
+
 <style lang="scss" scoped>
 .treeSelect {
   padding: 14px;

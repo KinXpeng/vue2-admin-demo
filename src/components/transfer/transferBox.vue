@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="box-info">
-        <div class="info-item" v-show="!searchKey || item.name.includes(searchKey)" v-for="(item, index) in transferList"
-          :key="index">
+        <div class="info-item" v-show="!searchKey || item.name.includes(searchKey)"
+          v-for="(item, index) in transferList" :key="index">
           <el-checkbox v-model="item.selected">{{ item.name }}</el-checkbox>
         </div>
       </div>
@@ -40,7 +40,7 @@
               <el-checkbox :value="item.list.length > 0 && selectedLength(item.list) == item.list.length"
                 @change="value => handleRightChange(value, index)" :disabled="item.list.length == 0"
                 :indeterminate="selectedLength(item.list) > 0 && selectedLength(item.list) != item.list.length">{{
-                  item.name }}</el-checkbox>
+      item.name }}</el-checkbox>
               <span>{{ selectedLength(item.list) + '/' + item.list.length }}</span>
             </div>
           </div>
@@ -160,6 +160,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss" scoped>
 .transfer-content {
   position: relative;
@@ -182,7 +183,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 60px;
+      height: 70px;
       background-color: #f5f7fa;
       border-bottom: 1px solid #eee;
       padding: 6px 16px;
@@ -224,5 +225,3 @@ export default {
   }
 }
 </style>
-
-

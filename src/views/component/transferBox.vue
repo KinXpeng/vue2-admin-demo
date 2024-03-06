@@ -85,12 +85,11 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .box {
-  width: 580px;
+  width: 620px;
   padding: 20px;
   margin: 0 auto;
 }
 </style>
-
-
